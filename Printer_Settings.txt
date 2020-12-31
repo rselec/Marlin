@@ -1,0 +1,78 @@
+
+Dump Marlin 2.0.6 31.12.2020
+
+>>> M503
+SENDING:M503
+echo:  G21    ; Units in mm (mm)
+echo:  M149 C ; Units in Celsius
+echo:; Filament settings: Disabled
+echo:  M200 S0 D1.75
+echo:; Steps per unit:
+echo: M92 X80.34 Y80.51 Z400.00 E98.52
+echo:; Maximum feedrates (units/s):
+echo:  M203 X500.00 Y500.00 Z20.00 E120.00
+echo:; Maximum Acceleration (units/s2):
+echo:  M201 X500.00 Y500.00 Z100.00 E5000.00
+echo:; Acceleration (units/s2): P<print_accel> R<retract_accel> T<travel_accel>
+echo:  M204 P500.00 R500.00 T500.00
+echo:; Advanced: B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> J<junc_dev>
+echo:  M205 B20000.00 S0.00 T0.00 J0.08
+echo:; Home offset:
+echo:  M206 X0.00 Y0.00 Z0.00
+echo:; Auto Bed Leveling:
+echo:  M420 S0 Z0.00
+echo:; Material heatup parameters:
+echo:  M145 S0 H190 B55 F0
+echo:  M145 S1 H245 B85 F0
+echo:; PID settings:
+echo:  M301 P22.20 I1.68 D73.42
+echo:  M304 P154.57 I30.12 D528.73
+; Controller Fan
+echo:  M710 S153 I0 A1 D60 ; (60% 0%)
+echo:; Z-Probe Offset (mm):
+echo:  M851 X-40.80 Y-2.70 Z-1.08
+echo:; Stepper driver current:
+echo:  M906 X580 Y580 Z580
+echo:  M906 T0 E650
+echo:; Driver stepping mode:
+echo:  M569 S1 X Y Z
+echo:  M569 S1 T0 E
+echo:; Linear Advance:
+echo:  M900 K0.55
+echo:; Filament load/unload lengths:
+echo:  M603 L350.00 U400.00
+echo:; Filament runout sensor:
+echo:  M412 S1 D7.00
+
+
+
+Neuer Start GCode:
+; Ender 3 Custom Start G-code
+G92 E0 ; Reset Extruder
+G28 ; Home all axes
+G29 ; Do auto bed level
+G0 Z2.0 F5000 ; Move Z Axis up little to prevent scratching of Heat Bed
+G0 X0.1 Y20 Z0.2 F5000.0 ; Move to start position
+G1 X0.1 Y200.0 Z0.2 F1800.0 E9 ; Draw the first line
+G0 X0.6 Y200.0 Z0.2 F5000.0 ; Move to side a little
+G1 X0.6 Y20 Z0.2 F1800.0 E7 ; Draw the second line
+G92 E0 ; Reset Extruder
+G0 Z2.0 F5000 ; Move Z Axis up little to prevent scratching of Heat Bed
+G0 X2 Y20 Z0.2 F5000.0 ; Move over to blob to printbed
+G0 Z5.0 F15000 ; Move Z Axis up fast to cut the blob from nozzle
+
+
+
+
+End GCode:
+G91 ;Relative positioning
+G1 E-2 F2700 ;Retract a bit
+G1 E-2 Z0.2 F2400 ;Retract and raise Z
+G0 Z10 F3000 ;Raise Z more
+G90 ;Absolute positionning
+G0 X0 Y{machine_depth} ;Present print
+M106 S0 ;Turn-off fan
+M104 S0 ;Turn-off hotend
+M140 S0 ;Turn-off bed
+
+M84 X Y E ;Disable all steppers but Z
