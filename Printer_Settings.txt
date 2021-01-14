@@ -46,6 +46,190 @@ echo:  M412 S1 D7.00
 
 
 
+
+Dump Marlin 2.0.7.2 14.01.2021
+
+>>> M503
+SENDING:M503
+echo:  G21    ; Units in mm (mm)
+echo:  M149 C ; Units in Celsius
+echo:; Filament settings: Disabled
+echo:  M200 S0 D1.75
+echo:; Steps per unit:
+echo: M92 X80.34 Y80.51 Z400.00 E147.04
+echo:; Maximum feedrates (units/s):
+echo:  M203 X500.00 Y500.00 Z20.00 E120.00
+echo:; Maximum Acceleration (units/s2):
+echo:  M201 X500.00 Y500.00 Z100.00 E5000.00
+echo:; Acceleration (units/s2): P<print_accel> R<retract_accel> T<travel_accel>
+echo:  M204 P500.00 R500.00 T500.00
+echo:; Advanced: B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> J<junc_dev>
+echo:  M205 B20000.00 S0.00 T0.00 J0.08
+echo:; Home offset:
+echo:  M206 X0.00 Y0.00 Z0.00
+echo:; Auto Bed Leveling:
+echo:  M420 S0 Z0.00
+echo:  G29 W I0 J0 Z-0.31250
+echo:  G29 W I1 J0 Z-0.21750
+echo:  G29 W I2 J0 Z-0.15500
+echo:  G29 W I3 J0 Z-0.13750
+echo:  G29 W I4 J0 Z-0.16500
+echo:  G29 W I0 J1 Z-0.18250
+echo:  G29 W I1 J1 Z-0.07500
+echo:  G29 W I2 J1 Z-0.04500
+echo:  G29 W I3 J1 Z-0.03250
+echo:  G29 W I4 J1 Z-0.04750
+echo:  G29 W I0 J2 Z-0.19500
+echo:  G29 W I1 J2 Z-0.05500
+echo:  G29 W I2 J2 Z-0.00750
+echo:  G29 W I3 J2 Z0.02500
+echo:  G29 W I4 J2 Z-0.01250
+echo:  G29 W I00.20750
+echo:  G29 W I1 J3 Z-0.09000
+echo:  G29 W I2 J3 Z-0.06000
+echo:  G29 W I3 J3 Z-0.04500
+echo:  G29 W I4 J3 Z-0.03250
+echoG29 W I0 J4 Z-0.31000
+echo:  G29 W I1 J4 Z-0.22250
+echo:  G29 W I2 J4 Z-0.19000
+echo:  G29 W I3 J4 Z-0.18000
+echo:  G29 W I4 J4 22250
+echo:; Material heatup parameters:
+echo:  M145 S0 H200 B55echo:  M301 P22.20 I1.68 D73.42
+echo:  M304 P154.57 I30.12 D528.73
+; Controller Fan
+echo:  M710 S153 I0 A1 D60 ; (60% 0%)
+echo:;80 Y-2.70 Z-1.01
+echo:; Stepper driver current:
+echo:  M906 X580echo:  M569 S1 T0 E
+echo:; Linear Advance:
+echo:  M900 K1.25
+ech350.00 U400.00
+echo:; Filament runout sensor:
+echo:  M412 S1 D7.
+>>> M503
+SENDING:M503
+echo:  G21    ; Units in mm (mm)
+echo:  M149 C ; Units in Celsius
+echo:; Filament settings: Disabled
+echo:  M200 S0 D1.75
+echo:; Steps per unit:
+echo: M92 X80.34 Y80.51 Z400.00 E147.04
+echo:; Maximum feedrates (units/s):
+echo:  M203 X500.00 Y500.00 Z20.00 E120.00
+echo:; Maximum Acceleration (units/s2):
+echo:  M201 X500.00 Y500.00 Z100.00 E5000.00
+echo:; Acceleration (units/s2): P<print_accel> R<retract_accel> T<travel_accel>
+echo:  M204 P500.00 R500.00 T500.00
+echo:; Advanced: B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> J<junc_dev>
+echo:  M205 B20000.00 S0.00 T0.00 J0.08
+echo:; Home offset:
+echo:  M206 X0.00 Y0.00 Z0.00
+echo:; Auto Bed Leveling:
+echo:  M420 S0 Z0.00
+echo:  G29 W I0 J0 Z-0.31250
+echo:  G29 W I1 J0 Z-0.21750
+echo:  G29 W I2 J0 Z-0.15500
+echo:  G29 W I3 J0 Z-0.13750
+echo:  G29 W I4 J0 Z-0.16500
+echo:  G29 W I0 J1 Z-0.18250
+echo:  G29 W I1 J1 Z-0.07500
+echo:  G29 W I2 J1 Z-0.04500
+echo:  G29 W I3 J1 Z-0.03250
+echo:  G29 W I4 J1 Z-0.04750
+echo:  G29 W I0 J2 Z-0.19500
+echo:  G29 W I1 J2 Z-0.05500
+echo:  G29 W I2 J2 Z-0.00750
+echo:  G29 W I3 J0.02500
+echo:  G29 W I4 J2 Z-0.01250
+echo:  G29 W I0 J3 Z-0.20750
+echo:  G29 W I1 J3 Z-0.09000
+echo:  G29 W I2 J3 Z-0.06000
+echoW I3 J3 Z-0.04500
+echo:  G29 W I4 J3 Z-0.03250
+echo:  G29 W I0 J4 Z-0.31000
+echo:  G29 W I1 J4 Z-0.22250
+echo:  G29 W I2 J4 Z-0.9000
+echo:  G29 W I3 J4 Z-0.18000
+echo:  G29 W I4 J4 Z-0.22250
+echo:; Material heatup parameters:
+echo:  M145 S0 H200 B55 F0
+ech1.68 D73.42
+echo:  M304 P154.57 I30.12 D528.73
+; Controller Fan
+echo:  M710 S153 I0 A1 D60 ; (60% 0%)
+echo:; Z-Probe Offset (mm)01
+echo:; Stepper driver current:
+echo:  M906 X580 Y580 Z580
+ech Z
+echo:  M569 S1 T0 E
+echo:; Linear Advance:
+echo:  M900 K1.25
+lament runout sensor:
+echo:  M412 S1 D7.00
+
+SENDING:M503
+echo:  G21    ; Units in mm (mm)
+echo:  M149 C ; Units in Celsius
+echo:; Filament settings: Disabled
+echo:  M200 S0 D1.75
+echo:; Steps per unit:
+echo: M92 X80.34 Y80.51 Z400.00 E147.04
+echo:; Maximum feedrates (units/s):
+echo:  M203 X500.00 Y500.00 Z20.00 E120.00
+echo:; Maximum Acceleration (units/s2):
+echo:  M201 X500.00 Y500.00 Z100.00 E5000.00
+echo:; Acceleration (units/s2): P<print_accel> R<retract_accel> T<travel_accel>
+echo:  M204 P500.00 R500.00 T500.00
+echo:; Advanced: B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> J<junc_dev>
+echo:  M205 B20000.00 S0.00 T0.00 J0.08
+echo:; Home offset:
+echo:  M206 X0.00 Y0.00 Z0.00
+echo:; Auto Bed Leveling:
+echo:  M420 S0 Z0.00
+echo:  G29 W I0 J0 Z-0.31250
+echo:  G29 W I1 J0 Z-0.21750
+echo:  G29 W I2 J0 Z-0.15500
+echo:  G29 W I3 J0 Z-0.13750
+echo:  G29 W I4 J0 Z-0.16500
+echo:  G29 W I0 J1 Z-0.18250
+echo:  G29 W I1 J1 Z-0.07500
+echo:  G29 W I2 J1 Z-0.04500
+echo:  G29 W I3 J1 Z-0.03250
+echo:  G29 W I4 J1 Z-0.04750
+echo:  G29 W I0 J2 Z-0.19500
+echo:  G29 W I1 J2 Z-0.05500
+echo:  G29 W I2 J2 Z-0.00750
+echo:  G29 W I3 J2 Z0.02500
+echo:  G29 W I4 J2 Z-0.01250
+echo:  G29 W I0 J3 Z-0.20750
+echo:  G29 W I1 J3 Z-0.09000
+echo:  G29 W I2 J3 Z-0.06000
+echo:  G29 W I3 J3 Z-0.04500
+echo:  G29 W I4 J3 Z-0.03250
+echo:  G29 W I0 J4 Z-0.31000
+echo:  G29 W I1 J4 Z-0.22250
+echo:  G29 W I2 J4 Z-0.19000
+echo:  G29 W I3 J4 Z-0.18000
+echo:  G29 W I4 J4 Z-0.22250
+echo:; Material heatup parameters:
+echo:  M145 S0 H200 B55 F0
+echo:  M145 S1 H235 B75 F0
+echo:; PID settings:
+echo:  M301 P22.20 I1.68 D73.42
+echo:  M304 P154.57 I30.12 D528.73
+; Controller Fan
+echo:  M710 S153 I0 A1 D60 ; (60% 0%)
+echo:; Z-Probe Oet (mm):
+echo:  M851 X-40.80 Y-2.70 Z-1.01
+echo:; Stepper driverecho:  M906 X580 Y580 Z580
+echo:  M906 T0 E650
+echo:; Driver stt load/unload lengths:
+echo:  M603 L350.00 U400.00
+echo:; Filame7.00
+
+
+
 Neuer Start GCode:
 ; Ender 3 Custom Start G-code
 G92 E0 ; Reset Extruder
